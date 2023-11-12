@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Rock, Paper, Scissors Game</title>
+</head>
+<body>
+    <header class="header-games">
+        <h1 class="title">Games</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="game-form" onsubmit="playGame(); return false;">
+            <label>
+                Choose: 
+                <select id="userChoice">
+                    <option value="rock">Rock</option>
+                    <option value="paper">Paper</option>
+                    <option value="scissors">Scissors</option>
+                </select>
+            </label>
+            <input type="submit" value="Submit">
+        </form>
+        <div class="result-boxes">
+            <div class="user-box" id="userChoiceBox">You Chose: </div>
+            <div class="computer-box" id="computerChoiceBox">Computer Chose: </div>
+        </div>
+    </main>
+    <footer class="footer-games">
+        <!-- Footer Content -->
+    </footer>
+</body>
+</html>
