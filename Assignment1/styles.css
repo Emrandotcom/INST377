@@ -5,13 +5,13 @@ body {
 }
 
 .header-home {
-    background-color: #3498db; /* Header color */
+    background-color: #3498db;
     padding: 20px;
     text-align: center;
 }
 
 .title {
-    color: #ffffff; /* Title color */
+    color: #ffffff;
 }
 
 nav ul {
@@ -26,11 +26,11 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: #ffffff; /* Nav link color */
+    color: #ffffff;
 }
 
 nav a:hover {
-    color: #2ecc71; /* Nav link hover color */
+    color: #2ecc71;
 }
 
 main {
@@ -39,7 +39,7 @@ main {
 
 .main-section {
     width: 70%;
-    border: 2px solid #000000; /* Black border */
+    border: 2px solid #000000;
     padding: 20px;
 }
 
@@ -49,7 +49,7 @@ main {
 
 .sidebar {
     width: 25%;
-    border: 2px solid #000000; /* Black border */
+    border: 2px solid #000000;
     padding: 20px;
 }
 
@@ -62,17 +62,17 @@ main {
     width: 100%;
     padding: 10px;
     text-align: center;
-    background-color: #2ecc71; /* Button color */
-    color: #ffffff; /* Button text color */
+    background-color: #2ecc71;
+    color: #ffffff;
     text-decoration: none;
 }
 
 .contact-btn:hover {
-    background-color: #1abc9c; /* Button hover color */
+    background-color: #1abc9c;
 }
 
 .footer-home {
-    background-color: #3498db; /* Footer color */
+    background-color: #3498db;
     padding: 10px;
     text-align: center;
     position: absolute;
