@@ -27,3 +27,15 @@ function playGame() {
         document.body.style.backgroundColor = "#3498db";
     }
 }
+
+function validateForm() {
+    var bigTextboxValue = document.getElementById("bigTextbox").value;
+    
+    var specialChars = /[*|\":<>[\]{}`\\()';@&$]/;
+    
+    if (specialChars.test(bigTextboxValue)) {
+        alert("Big Textbox cannot contain special characters.");
+    } else {
+        alert("Form submitted successfully!");
+    }
+}
