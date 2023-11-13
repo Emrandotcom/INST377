@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Contact Us</title>
 </head>
 <body>
-    <header class="header-contact">
-    </header>
-    <main>
-        <form id="contact-form">
-        </form>
-    </main>
-    <footer class="footer-contact">
-    </footer>
+    <h1>Contact Us</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <h2>Type your Question/Concern Below</h2>
+    <form action="/action_page.php">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="John Doe"><br>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" value=""><br>
+        <label for="question">Question:</label><br>
+        <textarea> id="question" name="question" value="" rows="10" cols="100"></textarea>
+        <br>
+        <input type="submit" value="Submit" href="success.html">
+      </form> 
 </body>
 </html>
