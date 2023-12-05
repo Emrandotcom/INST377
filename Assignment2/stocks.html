@@ -26,11 +26,9 @@
         <div class="content">
             <h1>Stocks</h1>
 
-             <!-- Stock Ticker Input -->
     <label for="stockTicker">Enter Stock Ticker:</label>
     <input type="text" id="stockTicker" placeholder="e.g., AAPL">
 
-    <!-- Date Range Selector -->
     <label for="dateRange">Select Date Range:</label>
     <select id="dateRange">
       <option value="30">30 Days</option>
@@ -38,13 +36,10 @@
       <option value="90">90 Days</option>
     </select>
 
-    <!-- Custom Button to Fetch Data -->
     <button onclick="fetchStockData()" class="custom-button">Fetch Data</button>
 
-    <!-- Chart Container -->
     <canvas id="stockChart" width="400" height="200"></canvas>
 
-    <!-- Top 5 Stocks Table -->
     <table id="topStocks">
       <thead>
         <tr>
@@ -55,7 +50,6 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Table rows will be dynamically added using JavaScript -->
       </tbody>
     </table>
   </div>
