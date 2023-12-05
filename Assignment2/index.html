@@ -25,16 +25,23 @@
         <div class="content">
             <div class="box-container">
                 <h1>Welcome to Class Activities!</h1>
-                <button onclick="navigateTo('stocks.html')" class="button-17">Stocks</button>
-                <button onclick="navigateTo('dogs.html')" class="button-17">Dogs</button>
-                <p id="quote"></p>
+                <a href="stocks.html">
+                    <button class="button-17" type="button" onclick="navigateTo('stocks.html')">Stocks</button>
+                </a>
+                <a href="dogs.html">
+                    <button class="button-17" type="button" onclick="navigateTo('dogs.html')">Dogs</button> <br>
+                </a>
+                <h3> Quote of the Page Load: </h3>
+                <p><q id="quote"></q></p>
             </div>
         </div>
     </main>
 
     <div class="audio-instructions">
-        <p>Instructions: Say "Hello" for a greeting, "Alerts with Hello World" for an alert, "Change the color to
-            &lt;color&gt;" to change background color, and "Navigate to &lt;page&gt;" to navigate to another page.
+        <p>Audio Instructions: <br><br> Say.. <br>
+            <li> "Hello" for a greeting, Alerts with "Hello World"</li> <br>
+            <li> "Change the color to &lt;color&gt;" to change background color </li><br>
+            <li>"Navigate to &lt;page&gt;" to navigate to another page.</li>
         </p>
         <button id="turn-on-audio" class="button-17">Turn On Audio</button>
         <button id="turn-off-audio" class="button-17">Turn Off Audio</button>

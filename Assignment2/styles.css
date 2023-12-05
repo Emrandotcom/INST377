@@ -55,6 +55,8 @@ main {
 
 .audio-instructions {
     margin-top: 20px;
+    max-width: 1000px;
+    background-color: lightgreen;
 }
 
 .audio-status {
@@ -134,3 +136,8 @@ main {
 .button-17:disabled {
     box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
+
+.dog-carousel img {
+    width: 100%;
+    height: auto;
+  }
