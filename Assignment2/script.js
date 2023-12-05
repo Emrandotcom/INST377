@@ -46,19 +46,27 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = page;
   };
 
-  const fetchAndDisplayQuote = async () => {
+  const apiURL = "https://zenquotes.io/api/random";
+
+  async function getRandomQuote(url) {
     try {
-      const response = await fetch('https://zenquotes.io/api/random');
+      const response = await fetch(url);
       const data = await response.json();
-      const quoteElement = document.getElementById('quote');
-      
-      if (quoteElement) {
-        quoteElement.innerText = data[0]?.q || 'Failed to fetch a quote.';
+
+      if (data.length > 0) {
+        const quote = data[0];
+        console.log(`Quote: ${quote.q}`);
+        console.log(`Author: ${quote.a}`);
+        console.log(`Author Image: ${quote.i}`);
+        console.log(`Character Count: ${quote.c}`);
+        console.log(`HTML Quote: ${quote.h}`);
+      } else {
+        console.error('No quotes available.');
       }
     } catch (error) {
-      console.error('Error fetching quote:', error);
+      console.error('Error fetching random quote:', error);
     }
-  };
+  }
 
-  fetchAndDisplayQuote();
+  getRandomQuote(apiURL);
 });
