@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  const navigateTo = (page) => {
-    window.location.href = page;
+  const navigateTo = (destination) => {
+    window.location.href = destination;
   };
 
   const apiURL = "https://zenquotes.io/api/random";
@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (data.length > 0) {
         const quote = data[0];
+        document.getElementById('quote').innerHTML = `<strong>QUOTE:</strong> ${quote.q} - ${quote.a}`;
         console.log(`Quote: ${quote.q}`);
         console.log(`Author: ${quote.a}`);
         console.log(`Author Image: ${quote.i}`);

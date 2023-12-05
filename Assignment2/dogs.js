@@ -80,36 +80,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const showDogInfo = async (breed) => {
         try {
-          const infoResponse = await fetch(`https://api.thedogapi.com/v1/breeds/search?q=${breed}`);
-          const infoData = await infoResponse.json();
-    
-          if (infoData.length > 0) {
-            const breedInfo = infoData[0];
-            const infoContainer = document.getElementById('dog-info-container');
-            infoContainer.innerHTML = '';
-    
-            const title = document.createElement('h2');
-            title.innerText = breed;
-            infoContainer.appendChild(title);
-    
-            const description = document.createElement('p');
-            description.innerText = `Breed Description: ${breedInfo.description || 'Not available'}`;
-            infoContainer.appendChild(description);
-    
-            const minLife = document.createElement('p');
-            minLife.innerText = `Min Life: ${breedInfo.life_span || 'Not available'}`;
-            infoContainer.appendChild(minLife);
-    
-            const maxLife = document.createElement('p');
-            maxLife.innerText = `Max Life: ${breedInfo.life_span || 'Not available'}`;
-            infoContainer.appendChild(maxLife);
-          } else {
-            console.error(`Breed information not found for ${breed}`);
-          }
+            const infoResponse = await fetch(`https://api.thedogapi.com/v1/breeds/search?q=${breed}`);
+            const infoData = await infoResponse.json();
+
+            if (infoData.length > 0) {
+                const breedInfo = infoData[0];
+                const infoContainer = document.getElementById('dog-info-container');
+                infoContainer.innerHTML = '';
+
+                const title = document.createElement('h2');
+                title.innerText = breed;
+                infoContainer.appendChild(title);
+
+                const description = document.createElement('p');
+                description.innerText = `Breed Description: ${breedInfo.description || 'Not available'}`;
+                infoContainer.appendChild(description);
+
+                const minLife = document.createElement('p');
+                minLife.innerText = `Min Life: ${breedInfo.life_span || 'Not available'}`;
+                infoContainer.appendChild(minLife);
+
+                const maxLife = document.createElement('p');
+                maxLife.innerText = `Max Life: ${breedInfo.life_span || 'Not available'}`;
+                infoContainer.appendChild(maxLife);
+            } else {
+                console.error(`Breed information not found for ${breed}`);
+            }
         } catch (error) {
-          console.error('Error fetching dog information:', error);
+            console.error('Error fetching dog information:', error);
         }
-      };
+    };
 
     annyang.addCommands({
         'load dog breed :breed': showDogInfo,
